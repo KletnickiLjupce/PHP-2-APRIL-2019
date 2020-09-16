@@ -1,0 +1,12 @@
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#ErrorDocument 404 "Web site upgrade! Please contact <a href=\" mailto:owner@google.com\" > Send Email </a>"
+
+RewriteRule (.+) /php2/framework/index.php?parameters=$1
+
+#Redirect / https://www.google.com
+#Redirect /php2/ /c3/index.php
